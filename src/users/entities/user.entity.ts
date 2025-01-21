@@ -13,7 +13,7 @@ export class User {
     @Column({ type: 'varchar', length: 20, nullable: false })
     password: string;
 
-    @Column({ type: 'varchar', length: 50, nullable: false })
+    @Column({ type: 'varchar', length: 50, nullable: false, unique: true })
     email: string
 
     @Column({ type: 'timestamp', nullable: false, default: () => 'CURRENT_TIMESTAMP' })
